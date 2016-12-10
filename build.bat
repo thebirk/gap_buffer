@@ -1,2 +1,2 @@
 @echo off
-cl -Zi -Febuffer main.c buffer.c
+cl -Zi -Febuffer src/main.c src/buffer.c

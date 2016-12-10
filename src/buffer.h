@@ -17,7 +17,7 @@ int buffer_get_size(BufferHandle handle);
 // Insert a char at the current offset
 void buffer_insert(BufferHandle handle, char c);
 // Insert a string at the current offset
-void buffer_insert_string(BufferHandle handle, char *str);
+void buffer_insert_string(BufferHandle handle, const char *str);
 
 // Moves the offset one to the left if possible
 void buffer_move_left(BufferHandle handle);
