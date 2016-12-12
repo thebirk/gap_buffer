@@ -19,6 +19,9 @@ void buffer_insert(BufferHandle handle, char c);
 // Insert a string at the current offset
 void buffer_insert_string(BufferHandle handle, const char *str);
 
+// Removes the current char
+void buffer_remove(BufferHandle handle);
+
 // Moves the offset one to the left if possible
 void buffer_move_left(BufferHandle handle);
 // Moves the offset one to the right if possible
@@ -27,6 +30,16 @@ void buffer_move_right(BufferHandle handle);
 void buffer_move(BufferHandle handle, int distance);
 // Move to a specific offset
 void buffer_seek(BufferHandle handle, int pos);
+
+// Moves to the start of the current line
+void buffer_seek_home(BufferHandle handle);
+// Moves to the end of the current line
+void buffer_seek_end(BufferHandle handle);
+
+// Move to the previuos line, trying to keep the offset into the line
+void buffer_seek_up(BufferHandle handle);
+// Move to the next line, trying to keep the offset into the line
+void buffer_seek_down(BufferHandle handle);
 
 // Return a string containg the buffer. Has to be freed with free()
 char* buffer_stringify(BufferHandle handle);
